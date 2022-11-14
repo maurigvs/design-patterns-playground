@@ -3,7 +3,7 @@ package com.my.playground.strategy;
 import com.my.playground.strategy.entities.Bus;
 import com.my.playground.strategy.entities.Car;
 import com.my.playground.strategy.entities.Taxi;
-import com.my.playground.strategy.entities.contexts.TransportContext;
+import com.my.playground.strategy.contexts.TransportContext;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,5 +59,11 @@ public class StrategySolvedTest {
         transportContext.chooseTransport();
         // then
         assertEquals(expected, actual.toString());
+    }
+
+    static class Plane {
+        public void selectTransport(){
+            System.out.println("User opted to go by Plane!");
+        }
     }
 }

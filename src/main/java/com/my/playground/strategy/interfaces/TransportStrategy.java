@@ -1,4 +1,4 @@
-package com.my.playground.strategy;
+package com.my.playground.strategy.interfaces;
 
 public interface TransportStrategy {
 

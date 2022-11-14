@@ -1,6 +1,6 @@
 package com.my.playground.strategy.entities;
 
-import com.my.playground.strategy.TransportStrategy;
+import com.my.playground.strategy.interfaces.TransportStrategy;
 
 public class Taxi implements TransportStrategy {
 

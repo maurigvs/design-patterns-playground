@@ -7,7 +7,6 @@ public class MainStrategy {
     }
 
     public static void chooseTransport(String mode) {
-
         if(mode.equals("CAR")){
             System.out.println("User opted to go by Car!");
         } else if (mode.equals("BUS")) {
