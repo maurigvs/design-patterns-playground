@@ -32,8 +32,8 @@ public class StrategySolvedTest {
     void should_PrintMessage_when_CarIsChoosen(){
         // given
         String expected = "User opted to go by Car!\n";
-        // when
         TransportContext transportContext = new TransportContext(new Car());
+        // when
         transportContext.chooseTransport();
         // then
         assertEquals(expected, actual.toString());
@@ -43,8 +43,8 @@ public class StrategySolvedTest {
     void should_PrintMessage_when_BusIsChoosen(){
         // given
         String expected = "User opted to go by Bus!\n";
-        // when
         TransportContext transportContext = new TransportContext(new Bus());
+        // when
         transportContext.chooseTransport();
         // then
         assertEquals(expected, actual.toString());
@@ -54,16 +54,10 @@ public class StrategySolvedTest {
     void should_PrintMessage_when_TaxiIsChoosen(){
         // given
         String expected = "User opted to go by Taxi!\n";
-        // when
         TransportContext transportContext = new TransportContext(new Taxi());
+        // when
         transportContext.chooseTransport();
         // then
         assertEquals(expected, actual.toString());
-    }
-
-    static class Plane {
-        public void selectTransport(){
-            System.out.println("User opted to go by Plane!");
-        }
     }
 }
