@@ -10,16 +10,16 @@ public class MainComposite {
 
     public static void main(String[] args) {
 
-        CEO ceo = new CEO("Andrew", "COM", "Chief Executive Officer");
+        CEO ceo = new CEO("Andrew", "Chief Executive Officer");
 
-        Manager manager = new Manager("Peter", "HR", "HR Manager");
-        Manager executive = new Manager("Derik", "HR", "Senior HR Executive");
+        Manager executive = new Manager("Derik",  "Senior HR Executive");
+        Manager manager = new Manager("Peter",  "HR Manager");
 
-        Developer developer1 = new Developer("salitha", "ENG", "Software Engineer");
-        Developer developer2 = new Developer("Jhon", "ENG", "Senior Software Engineer");
+        Developer developer1 = new Developer("salitha", "Software Engineer");
+        Developer developer2 = new Developer("Jhon", "Senior Software Engineer");
 
-        QA qe1 = new QA("Tom", "ENG", "Quality Assurance Engineer");
-        QA qe2 = new QA("Jimmy", "ENG", "Quality Assurance Lead");
+        QA qe1 = new QA("Tom","Quality Assurance Engineer");
+        QA qe2 = new QA("Jimmy","Quality Assurance Lead");
 
         Department engDept = new Department("ENG", new ArrayList<>());
         engDept.addEmployee(developer1);
@@ -32,9 +32,9 @@ public class MainComposite {
         hrDept.addEmployee(executive);
 
         Company company = new Company("XYZ");
-        company.addMember(engDept);
-        company.addMember(hrDept);
         company.addMember(ceo);
+        company.addMember(hrDept);
+        company.addMember(engDept);
         company.showCompanyName();
         company.showDetails();
     }
