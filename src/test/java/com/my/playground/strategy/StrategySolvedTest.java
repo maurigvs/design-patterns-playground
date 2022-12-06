@@ -2,6 +2,7 @@ package com.my.playground.strategy;
 
 import com.my.playground.strategy.entities.Bus;
 import com.my.playground.strategy.entities.Car;
+import com.my.playground.strategy.entities.Plane;
 import com.my.playground.strategy.entities.Taxi;
 import com.my.playground.strategy.contexts.TransportContext;
 import org.junit.jupiter.api.AfterEach;
@@ -55,6 +56,17 @@ public class StrategySolvedTest {
         // given
         String expected = "User opted to go by Taxi!\n";
         TransportContext transportContext = new TransportContext(new Taxi());
+        // when
+        transportContext.chooseTransport();
+        // then
+        assertEquals(expected, actual.toString());
+    }
+
+    @Test
+    void should_PrintMessage_when_PlaneIsChosen(){
+        // given
+        String expected = "User opted to go by Plane!\n";
+        TransportContext transportContext = new TransportContext(new Plane());
         // when
         transportContext.chooseTransport();
         // then
